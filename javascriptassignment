@@ -1,0 +1,36 @@
+const NFTs = [];
+
+function mintNFT(Animalname, colur, nickname, sound) {
+    let nft = {
+        Animalname,
+        colur,
+        nickname,
+        sound
+    }
+
+    NFTs.push(nft);
+}
+
+function listNFTs() {
+    NFTs.forEach((nft) => { 
+        console.log(
+            "\n\nName: ", nft.Animalname,
+            "\nimg: ", nft.colur,
+            "\nnickname: ", nft.nickname,
+            "\ncurrency: ", nft.sound,
+           
+        );
+    });
+}
+
+function getTotalSupply() {
+    console.log("\n\nNumber of NFTs minted: ", NFTs.length, "\n\n");
+}
+
+// Correct mintNFT function calls
+mintNFT("Dog", "black", "kutta", "Bhau");
+mintNFT("Cat", "white", "billi", "mew");
+mintNFT("Lion", "yellow", "sher", "roar");
+
+listNFTs();
+getTotalSupply();
